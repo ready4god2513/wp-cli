@@ -37,12 +37,12 @@ class InternalFlags {
 			'description' => $command->get_shortdesc(),
 		);
 
-		if ( $command instanceof Dispatcher\AtomicCommand ) {
-			$dump['synopsis'] = (string) $command->get_synopsis();
-		} else {
+		if ( $command instanceof Dispatcher\CommandContainer ) {
 			foreach ( Dispatcher\get_subcommands( $command ) as $subcommand ) {
 				$dump['subcommands'][] = self::command_to_array( $subcommand );
 			}
+		} else {
+			$dump['synopsis'] = (string) $command->get_synopsis();
 		}
 
 		return $dump;

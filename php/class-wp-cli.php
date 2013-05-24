@@ -261,11 +261,7 @@ class WP_CLI {
 			$command = $subcommand;
 		}
 
-		if ( $command instanceof Dispatcher\CommandContainer ) {
-			$command->show_usage();
-		} else {
-			$command->invoke( $args, $assoc_args );
-		}
+		$command->invoke( $args, $assoc_args );
 	}
 
 	// back-compat

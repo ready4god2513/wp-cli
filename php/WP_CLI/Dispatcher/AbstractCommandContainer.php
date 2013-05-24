@@ -15,5 +15,13 @@ abstract class AbstractCommandContainer implements Command, CommandContainer {
 
 		return $this->subcommands;
 	}
+
+	function get_synopsis() {
+		return '';
+	}
+
+	function invoke( $args, $assoc_args ) {
+		$this->show_usage();
+	}
 }
 

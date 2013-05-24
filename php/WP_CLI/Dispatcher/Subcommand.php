@@ -2,7 +2,7 @@
 
 namespace WP_CLI\Dispatcher;
 
-class Subcommand implements Command, AtomicCommand, Documentable {
+class Subcommand implements Command, Documentable {
 
 	private $parent, $name, $class, $method, $docparser;
 

@@ -24,14 +24,9 @@ interface Command {
 
 	function get_name();
 	function get_parent();
+	function get_synopsis();
 
 	function show_usage();
-}
-
-
-interface AtomicCommand {
-
-	function get_synopsis();
 	function invoke( $args, $assoc_args );
 }
 
