@@ -14,12 +14,8 @@ class Regular {
 		fwrite( $handle, \cli\Colors::colorize( $message . "\n", $this->colorize ) );
 	}
 
-	function line( $message ) {
+	function info( $message ) {
 		$this->_line( $message );
-	}
-
-	function success( $message, $label ) {
-		$this->line( '%G' . $label . ': %n' . $message );
 	}
 
 	function warning( $message, $label ) {

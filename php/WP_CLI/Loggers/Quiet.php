@@ -10,11 +10,7 @@ class Quiet {
 		$this->colorize = $colorize;
 	}
 
-	function line( $message ) {
-		// nothing
-	}
-
-	function success( $message, $label ) {
+	function info( $message ) {
 		// nothing
 	}
 

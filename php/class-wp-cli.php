@@ -108,7 +108,7 @@ class WP_CLI {
 	 * @param string $message
 	 */
 	static function line( $message = '' ) {
-		self::$logger->line( $message );
+		self::$logger->info( $message );
 	}
 
 	/**
@@ -118,7 +118,7 @@ class WP_CLI {
 	 * @param string $label
 	 */
 	static function success( $message, $label = 'Success' ) {
-		self::$logger->success( $message, $label );
+		self::$logger->info( '%G' . $label . ': %n' . $message );
 	}
 
 	/**
