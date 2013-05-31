@@ -378,6 +378,8 @@ class Runner {
 			exit;
 		}
 
+		WP_CLI::do_hook( 'after_wp_load' );
+
 		$this->_run_command();
 	}
 }
