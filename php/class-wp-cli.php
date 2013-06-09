@@ -293,6 +293,7 @@ class WP_CLI {
 		if ( $command instanceof Dispatcher\CommandContainer ) {
 			$command->show_usage();
 		} else {
+			WP_CLI::do_hook( 'before_invoke:' . $args[0] );
 			$command->invoke( $final_args, $assoc_args );
 		}
 	}
