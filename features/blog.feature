@@ -1,14 +1,5 @@
 Feature: Manage a WordPress installation
 
-  Scenario: Install multisite
-    Given a WP install
-
-    When I run `wp core install-network`
-    Then STDOUT should not be empty
-
-    When I try the previous command again
-    Then the return code should be 1
-
   Scenario: Delete a blog by id
     Given a WP multisite install
 
